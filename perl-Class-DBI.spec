@@ -21,18 +21,19 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Class::DBI provides a convenient abstraction layer to a database.
 
-It not only provides a simple database to object mapping layer, but can
-be used to implement several higher order database functions (triggers,
-referential integrity, cascading delete etc.), at the application level,
-rather than at the database.
+It not only provides a simple database to object mapping layer, but
+can be used to implement several higher order database functions
+(triggers, referential integrity, cascading delete etc.), at the
+application level, rather than at the database.
 
 %description -l pl
-Class::DBI udostêpnia wygodny poziom abstrakcji w dostêpie do bazy danych.
+Class::DBI udostêpnia wygodny poziom abstrakcji w dostêpie do bazy
+danych.
 
 Udostêpnia nie tylko prost± warstwê mapowania bazy na obiekt, ale mo¿e
-tak¿e zostaæ u¿yty do zaimplementowania wa¿niejszych funkcji bazodanowych
-(triggery, integralno¶æ referencyjna, kaskadowe usuwanie itp.) na poziomie
-aplikacji, nie bazy danych.
+tak¿e zostaæ u¿yty do zaimplementowania wa¿niejszych funkcji
+bazodanowych (triggery, integralno¶æ referencyjna, kaskadowe usuwanie
+itp.) na poziomie aplikacji, nie bazy danych.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
