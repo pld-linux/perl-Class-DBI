@@ -1,11 +1,11 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Class
 %define	pnam	DBI
-Summary:	Class::DBI -- Simple Database Abstraction
-Summary(pl):	Class::DBI -- prosta abstrakcja bazodanowa
+Summary:	Class::DBI - simple database abstraction
+Summary(pl):	Class::DBI - prosta abstrakcja bazodanowa
 Name:		perl-Class-DBI
 Version:	0.91
-Release:	1
+Release:	3
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
