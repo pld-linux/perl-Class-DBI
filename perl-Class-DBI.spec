@@ -5,13 +5,13 @@ Summary:	Class::DBI -- Simple Database Abstraction
 Summary(pl):	Class::DBI -- prosta abstrakcja bazodanowa
 Name:		perl-Class-DBI
 Version:	0.90
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-require.patch
 BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl(Class::Accessor)          => 0.16
 Requires:	perl(Class::Data::Inheritable) => 0.02
 Requires:	perl(Ima::DBI)                 => 0.26
@@ -40,7 +40,8 @@ itp.) na poziomie aplikacji, nie bazy danych.
 %patch -p1
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 #%%{__make} test
 
@@ -55,6 +56,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Change* README
-%{perl_sitelib}/%{pdir}/%{pnam}.pm
-%{perl_sitelib}/%{pdir}/%{pnam}
+%{perl_vendorlib}/%{pdir}/%{pnam}.pm
+%{perl_vendorlib}/%{pdir}/%{pnam}
 %{_mandir}/man3/*
