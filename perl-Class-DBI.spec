@@ -9,7 +9,7 @@ Summary:	Class::DBI - simple database abstraction
 Summary(pl):	Class::DBI - prosta abstrakcja bazodanowa
 Name:		perl-Class-DBI
 Version:	0.96
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -22,7 +22,7 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl-Class-Accessor >= 0.18
 BuildRequires:	perl-Date-Simple
 BuildRequires:	perl-DBD-SQLite
-BuildRequires:	perl-Ima-DBI >= 0.30
+BuildRequires:	perl-Ima-DBI >= 0.33-2
 BuildRequires:	perl-UNIVERSAL-moniker >= 0.06
 %endif
 Requires:	perl-Class-Accessor => 0.18
