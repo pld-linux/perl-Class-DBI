@@ -42,7 +42,7 @@ itp.) na poziomie aplikacji, nie bazy danych.
 %build
 %{__perl} Makefile.PL
 %{__make}
-#%{__make} test
+#%%{__make} test
 
 %install
 rm -rf $RPM_BUILD_ROOT
