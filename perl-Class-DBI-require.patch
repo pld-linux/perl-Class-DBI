@@ -1,0 +1,11 @@
+diff -ur Class-DBI-0.89/lib/Class/DBI.pm Class-DBI-0.89.new/lib/Class/DBI.pm
+--- Class-DBI-0.89/lib/Class/DBI.pm	Mon Jun 24 08:55:08 2002
++++ Class-DBI-0.89.new/lib/Class/DBI.pm	Fri Aug  2 11:25:45 2002
+@@ -1,6 +1,6 @@
+ package Class::DBI;
+ 
+-require 5.00502;
++require 5.005_02;
+ 
+ use strict;
+ 
