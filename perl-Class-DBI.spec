@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_with	tests	# perform "make test"
+%bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Class
@@ -9,7 +9,7 @@ Summary:	Class::DBI - simple database abstraction
 Summary(pl):	Class::DBI - prosta abstrakcja bazodanowa
 Name:		perl-Class-DBI
 Version:	0.96
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
