@@ -10,8 +10,8 @@ Summary(pl):	Class::DBI - prosta abstrakcja bazodanowa
 Name:		perl-Class-DBI
 Version:	0.95
 Release:	2
-# same as Perl
-License:	GPL or Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	ca8a0a4f817351dee82b16153920eb97
