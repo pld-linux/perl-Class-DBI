@@ -1,21 +1,33 @@
+#
+# Conditional build:
+%bcond_with	tests	# perform "make test"
+
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Class
 %define	pnam	DBI
 Summary:	Class::DBI - simple database abstraction
 Summary(pl):	Class::DBI - prosta abstrakcja bazodanowa
 Name:		perl-Class-DBI
-Version:	0.94
+Version:	0.95
 Release:	1
-License:	GPL/Artistic
+# same as Perl
+License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	98fafa0e9f77806f9a38d68653fcac4c
+# Source0-md5:	ca8a0a4f817351dee82b16153920eb97
 Patch0:		%{name}-require.patch
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
-Requires:	perl(Class::Accessor)          => 0.18
-Requires:	perl(Class::Data::Inheritable) => 0.02
-Requires:	perl(Ima::DBI)                 => 0.29
+%if %{with tests}
+BuildRequires:	perl-Class-Accessor >= 0.18
+BuildRequires:	perl-Date-Simple
+BuildRequires:	perl-DBD-SQLite
+BuildRequires:	perl-Ima-DBI >= 0.30
+BuildRequires:	perl-UNIVERSAL-moniker >= 0.06
+%endif
+Requires:	perl-Class-Accessor => 0.18
+Requires:	perl-Class-Data-Inheritable => 0.02
+Requires:	perl-Ima-DBI => 0.30
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -44,7 +56,7 @@ itp.) na poziomie aplikacji, nie bazy danych.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
-#%%{__make} test
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
