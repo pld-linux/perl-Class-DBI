@@ -42,7 +42,7 @@ itp.) na poziomie aplikacji, nie bazy danych.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 #%%{__make} test
 
