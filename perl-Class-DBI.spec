@@ -1,7 +1,7 @@
 #
 # Conditional build:
 %bcond_with	tests	# perform "make test"
-
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Class
 %define	pnam	DBI
@@ -56,12 +56,14 @@ itp.) na poziomie aplikacji, nie bazy danych.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
+
 %{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{perl_vendorlib}/Class/DBI/Plugin
 
 %clean
