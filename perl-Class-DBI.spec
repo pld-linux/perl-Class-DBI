@@ -9,7 +9,7 @@ Summary:	Class::DBI - simple database abstraction
 Summary(pl):	Class::DBI - prosta abstrakcja bazodanowa
 Name:		perl-Class-DBI
 Version:	0.95
-Release:	1
+Release:	2
 # same as Perl
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
@@ -62,6 +62,7 @@ itp.) na poziomie aplikacji, nie bazy danych.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{perl_vendorlib}/Class/DBI/Plugin
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -69,6 +70,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Change* README
-%{perl_vendorlib}/%{pdir}/%{pnam}.pm
-%{perl_vendorlib}/%{pdir}/%{pnam}
+%{perl_vendorlib}/Class/DBI.pm
+%{perl_vendorlib}/Class/DBI
 %{_mandir}/man3/*
