@@ -15,7 +15,7 @@ BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl(Class::Accessor)          => 0.16
 Requires:	perl(Class::Data::Inheritable) => 0.02
-Requires:	perl(Ima::DBI)                 => 0.26
+Requires:	perl(Ima::DBI)                 => 0.29
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
