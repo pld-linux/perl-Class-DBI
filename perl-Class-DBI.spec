@@ -40,7 +40,7 @@ itp.) na poziomie aplikacji, nie bazy danych.
 %patch -p1
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make}
 #%{__make} test
 
