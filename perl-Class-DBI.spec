@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_with	tests	# perform "make test". needs MySQL server
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Class
@@ -8,20 +8,20 @@
 Summary:	Class::DBI - simple database abstraction
 Summary(pl):	Class::DBI - prosta abstrakcja bazodanowa
 Name:		perl-Class-DBI
-Version:	0.96
-Release:	3
+Version:	3.0.14
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	5026f142435b589c31aae1a97b2f1344
-Patch0:		%{name}-require.patch
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-v%{version}.tar.gz
+# Source0-md5:	c61f5da79207b8a8c440c10cde2b35bd
+URL:		http://search.cpan.org/dist/Class-DBI/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Class-Accessor >= 0.18
-BuildRequires:	perl-Date-Simple
 BuildRequires:	perl-DBD-SQLite
+BuildRequires:	perl-Date-Simple
 BuildRequires:	perl-Ima-DBI >= 0.33-2
 BuildRequires:	perl-UNIVERSAL-moniker >= 0.06
 %endif
@@ -49,8 +49,7 @@ bazodanowych (triggery, integralno¶æ referencyjna, kaskadowe usuwanie
 itp.) na poziomie aplikacji, nie bazy danych.
 
 %prep
-%setup -q -n %{pdir}-%{pnam}-%{version}
-%patch -p1
+%setup -q -n %{pdir}-%{pnam}-v%{version}
 
 %build
 %{__perl} Makefile.PL \
