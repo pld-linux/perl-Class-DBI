@@ -6,7 +6,7 @@
 %define		pdir	Class
 %define		pnam	DBI
 Summary:	Class::DBI - simple database abstraction
-Summary(pl.UTF-8):   Class::DBI - prosta abstrakcja bazodanowa
+Summary(pl.UTF-8):	Class::DBI - prosta abstrakcja bazodanowa
 Name:		perl-Class-DBI
 Version:	3.0.14
 Release:	1
