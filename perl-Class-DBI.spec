@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests	# perform "make test". needs MySQL server
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Class
 %define		pnam	DBI
 Summary:	Class::DBI - simple database abstraction
