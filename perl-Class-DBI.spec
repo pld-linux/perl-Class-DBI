@@ -8,7 +8,7 @@ Summary:	Class::DBI - simple database abstraction
 Summary(pl.UTF-8):	Class::DBI - prosta abstrakcja bazodanowa
 Name:		perl-Class-DBI
 Version:	3.0.17
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
